@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.main {
+  min-height: 100vh;
+  background-color: #E8F2F9;
+}
+
+.main h1 {
+  padding: 3%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 135%;
+}
+
+.dados {
+  
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  height: 238px;
+  margin: 3%;
+  background-color: #fff;
+  border-radius: 5%;
+  border: 2px solid #000;
+  align-items: center;
+  padding-left: 33%;
+}
