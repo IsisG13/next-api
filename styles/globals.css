@@ -1,55 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
+  
 
 .main {
-  min-height: 100vh;
-  background-color: #E8F2F9;
+  background-color: #282c34;
+  color: white;
+  min-height: 380vh;
 }
 
-.main h1 {
-  padding: 3%;
-  text-align: center;
-  font-weight: 700;
-  font-size: 135%;
+.App-header a {
+  text-decoration: none;
 }
 
-.dados {
+@media (max-width: 960px) {
+
+  .App-header h1 {
+    color: white;
+    text-align: center;
+    padding-top: 2%;
+    margin-top: 0;
+    margin-bottom: 3%;
+    /* font-weight: bold; */
+  }
   
-}
+  .conteudo {
+    font-size: 119%;
+    margin-left: 48%;
+    margin-top: -47%;
+    width: 50%;
+  }
+  
+  .conteudo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+  } 
 
-.card {
-  display: flex;
-  text-align: center;
-  height: 238px;
-  margin: 3%;
-  background-color: #fff;
-  border-radius: 5%;
-  border: 2px solid #000;
-  align-items: center;
-  padding-left: 33%;
+  .conteudo h5, p {
+    margin: 1% 0 0 0;
+  }
+  
+  .card {
+    border-radius: 12px;
+    width: 85%;
+    background-color: #8080802b;
+    padding-top: 0;
+    padding-bottom: 6%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+  }
+  
+  .App-header .imagem {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 44%;
+    height: 375px;
+    border-radius: 5px;
+  }
 }

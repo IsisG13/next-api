@@ -1,11 +1,19 @@
 // pages/api/dados.js
-export default function handler(req, res) {
-    const dados = [
-      { id: 1, nome: 'Exemplo 1', sobre: "Esse é o exemplo um" },
-      { id: 2, nome: 'Exemplo 2', sobre: "Esse é o exemplo dois" },
-      { id: 3, nome: 'Exemplo 3', sobre: "Esse é o exemplo tres" },
-    ];
-  
+import { getDocs, collection } from 'firebase/firestore';
+import db from '../../firebase';
+
+export default async function handler(req, res) {
+  try {
+    const dadosCollection = collection(db, 'dados');
+    const dadosSnapshot = await getDocs(dadosCollection);
+    const dados = dadosSnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
     res.status(200).json(dados);
+  } catch (error) {
+    console.error('Erro ao buscar dados:', error);
+    res.status(500).json({ error: 'Erro ao buscar dados.' });
   }
-  
+}
