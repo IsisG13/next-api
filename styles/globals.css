@@ -125,6 +125,10 @@ h1 {
 }
 
 @media (max-width: 960px) {
+
+  .main{
+    min-height: 329vh;
+  }
   .main-detalhes {
     background-color: #282c34;
     color: white;
