@@ -9,7 +9,7 @@ body {
 .main {
   background-color: #282c34;
   color: white;
-  min-height: 380vh;
+  min-height: 385vh;
 }
 
 .App-header a {
@@ -17,6 +17,11 @@ body {
 }
 
 @media (max-width: 960px) {
+  .main-detalhes {
+    background-color: #282c34;
+    color: white;
+    min-height: 100vh;
+  }
 
   .App-header h1 {
     color: white;
@@ -97,11 +102,11 @@ body {
 
   .trailer h3 {
     margin-bottom: 14%;
-    margin-left: 28%;
+    margin-left: 38%;
     margin-top: -26%;
     text-transform: uppercase;
     font-size: 142%;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .conteudoDetalhes .trailer img {

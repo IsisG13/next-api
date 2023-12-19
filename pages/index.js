@@ -1,8 +1,11 @@
+// index.js
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [dados, setDados] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchDados = async () => {
@@ -21,14 +24,19 @@ export default function Home() {
   return (
     <div className="main">
       <header className="App-header">
-        <a href="#">
+        <Link href="/">
+        <a>
           <h1>Marvel</h1>
         </a>
+        </Link>
         {dados &&
           dados.map((item) => (
-            <div className="card" key={item.id}>
-              <img className="imagem" src={item.imagem} alt={item.nome} />
-              {/* <Image className="imagem" src={item.imagem} alt={item.nome} /> */}
+            <div key={item.id} className="card">
+              <Link key={item.id} href={`/detalhes/${item.id}`}>
+                <a>
+                  <img className="imagem" src={item.imagem} alt={item.nome} />
+                </a>
+              </Link>
               <div className="conteudo">
                 <div key={item.id}>
                   <p>{item.nome}</p> <br />
