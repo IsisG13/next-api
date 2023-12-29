@@ -28,9 +28,7 @@ export default function Detalhes() {
       <header className="App-header">
         {/* Aqui quando o nome for clicado, vai voltar para a pagina inicial */}
         <Link href="/">
-        <a>
           <h1>Marvel</h1>
-        </a>
         </Link>
         {dados && (
           <div key={dados.id}>

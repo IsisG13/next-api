@@ -25,17 +25,13 @@ export default function Home() {
     <div className="main">
       <header className="App-header">
         <Link href="/">
-        <a>
-          <h1>Marvel</h1>
-        </a>
+            <h1>Marvel</h1>
         </Link>
         {dados &&
           dados.map((item) => (
             <div key={item.id} className="card">
               <Link key={item.id} href={`/detalhes/${item.id}`}>
-                <a>
-                  <img className="imagem" src={item.imagem} alt={item.nome} />
-                </a>
+                <img className="imagem" src={item.imagem} alt={item.nome} />
               </Link>
               <div className="conteudo">
                 <div key={item.id}>
